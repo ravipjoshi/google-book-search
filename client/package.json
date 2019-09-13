@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Mern Demo",
   "engines": {
-    "node": "10.16.0"
+    "node": "10.16.0",
+    "npm" : "6.10.3"
   },
   "private": true,
   "proxy": "http://localhost:3001/",
