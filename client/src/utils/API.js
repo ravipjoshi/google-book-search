@@ -1,20 +1,30 @@
 import axios from "axios";
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
-  },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
-  },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
-  },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
-};
+    search: function(query) {
+        return axios.get(BASEURL + query);
+    },
+
+    save: function(bookData) {
+        console.log("bookData below")
+        console.log(bookData.title)
+        return axios.post("/api/books", bookData);
+
+    },
+
+    getBooks: function() {
+        console.log("getBooks from API.js");
+        return axios.get("/api/books")
+    }, 
+
+    deleteBook: function(id) {
+        console.log(id.id)
+        // Not sure why I had to do id.id here. It was coming through as an object instead of just the id. But now it works.
+        // This way it fills out the route correctly.
+        return axios.delete("/api/books/" + id.id);
+    } 
+
+}
+
+
