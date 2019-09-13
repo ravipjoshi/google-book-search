@@ -1,20 +1,12 @@
 {
-  "name": "google-book-search",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "Google book api used to search the book and displays the details of the book",
+  "description": "",
   "main": "server.js",
   "engines": {
     "node": "10.16.0",
-    "npm" : "6.10.3"
+    "npm": "6.10.3"
   },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.7.0",
-    "node": "^12.10.0",
-    "react-script": "^2.0.5"
-  },
-  "devDependencies": {},
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -25,22 +17,16 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ravipjoshi/google-book-search.git"
-  },
-  "keywords": [
-    "book",
-    "google",
-    "book-search",
-    "google-book-search",
-    "search",
-    "save"
-  ],
-  "author": "Ravi Joshi",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ravipjoshi/google-book-search/issues"
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "homepage": "https://github.com/ravipjoshi/google-book-search#readme"
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.16",
+    "if-env": "^1.0.4"
+  }
 }
