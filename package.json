@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Google book api used to search the book and displays the details of the book",
   "main": "server.js",
+  "engines": {
+    "node": "10.16.0"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
